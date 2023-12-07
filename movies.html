@@ -1,0 +1,555 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NollyScore</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      #navbar-frame {
+        background: black;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #navbar-frame .logo {
+        width: 190px;
+        height: 38px;
+      }
+
+      #navbar-frame .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      #navbar-frame .harmburger-container {
+        width: 27px;
+        height: 14px;
+      }
+
+      #container .harmburger-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      #home-image-container {
+        width: 100%;
+        height: 466px;
+      }
+
+      #home-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      #movie-tv-container {
+        display: flex;
+        width: 100%;
+        height: 52px;
+        margin-top: 30px;
+      }
+
+      #movie-tv-container #movies {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background: black;
+        flex: 2;
+        height: 100%;
+      }
+
+      #movie-tv-container #tv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        background: white;
+        flex: 1;
+        height: 100%;
+      }
+
+      #movie-filter {
+        display: flex;
+        align-items: center;
+        background: black;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        width: 209px;
+        margin-top: 30px;
+        gap: 1rem;
+      }
+
+      #movie-filter h2 {
+        color: white;
+        text-align: center;
+        font-weight: 400;
+      }
+
+      #movie-search-container {
+        width: 407px;
+        height: 44px;
+        border-radius: 45px;
+        margin: 20px;
+        border: 1px solid #e7e7e7;
+      }
+
+      #movie-search-container input {
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        background: linear-gradient(0deg, #e7e7e7, #e7e7e7),
+          linear-gradient(0deg, #645e5e, #645e5e);
+        outline: none;
+        color: #e7e7e7;
+        border-radius: 15px;
+        font-size: 17px;
+      }
+
+      #movie-frame {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 21px;
+        margin-top: 60px;
+      }
+
+      #movie-frame .movie-card {
+        width: 381px;
+        height: 396px;
+        border-radius: 15px;
+        background: black;
+        border: none;
+      }
+
+      #movie-frame .movie-card .movie-img {
+        height: 215.08px;
+        width: 100%;
+      }
+
+      #movie-frame .movie-card .movie-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      #movie-frame .movie-card .movie-details {
+        display: flex;
+        flex-direction: column;
+        gap: 57px;
+        justify-content: center;
+        background: black;
+        margin: 0;
+        height: calc(100%-215.08px);
+        width: 100%;
+      }
+
+      #movie-frame .movie-card .movie-details h2,
+      p {
+        text-align: center;
+        color: white;
+      }
+
+      #movie-frame .movie-card .movie-details h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-top: 20px;
+      }
+
+      #movie-frame .movie-card .movie-details p {
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      #movie-frame .movie-card .movie-details .rating-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+      }
+
+      #movie-frame .movie-card .movie-details .rating-container .rating {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #movie-frame
+        .movie-card
+        .movie-details
+        .rating-container
+        .rating
+        .star-wrapper {
+        width: 5px;
+        height: 5px;
+        gap: 7px;
+      }
+
+      #movie-frame
+        .movie-card
+        .movie-details
+        .rating-container
+        .rating
+        .star-wrapper
+        img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      #movie-frame .movie-card .movie-details .rating-container .rating p {
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+      #pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        margin: 30px 0;
+        gap: 13px;
+      }
+
+      #pagination div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: black;
+        border-radius: 9px;
+        color: white;
+        font-weight: 400;
+        font-size: 23px;
+      }
+
+      #footer {
+        background: black;
+        width: 100%;
+      }
+
+      #footer #socials {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+
+      #footer #socials #footer-logo {
+        width: 85px;
+        height: 19px;
+      }
+
+      #footer #socials #footer-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      #social-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 13px;
+      }
+      #social-container .social {
+        width: 41px;
+        height: 41px;
+        background: white;
+        border-radius: 50%;
+      }
+
+      #social-container .social img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      #section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px;
+      }
+
+      #others {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 10px;
+        gap: 20px;
+      }
+
+      #others p {
+        color: white;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 400px;
+      }
+
+      #copyright {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+      }
+
+      #copyright p {
+        color: white;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 400px;
+      }
+
+      /* for desktop view */
+      @media screen and (min-width: 600px) {
+        body {
+          background: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header and Navbar -->
+    <div id="container">
+      <div id="navbar-frame">
+        <div class="logo">
+          <img src="movies-images/logo.svg" alt="logo" />
+        </div>
+        <div class="harmburger-container">
+          <img src="movies-images/Menu.svg" alt="harmburger" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Homepage image -->
+    <div id="home-image-container">
+      <img
+        src="movies-images/nollywood-homepage-pic.svg"
+        alt="homepage-image"
+      />
+    </div>
+
+    <!-- Movie filter container -->
+    <div id="movie-tv-container">
+      <div id="movies">
+        <p>Movie</p>
+      </div>
+      <div id="tv">
+        <p>TV</p>
+      </div>
+    </div>
+
+    <!-- movie filter -->
+    <div id="movie-filter">
+      <div class="harmburger-container">
+        <img src="movies-images/Menu.svg" alt="harmburger menu" />
+      </div>
+      <h2>Filter</h2>
+    </div>
+
+    <!-- movie search -->
+    <div id="movie-search-container">
+      <input type="search" id="movie-search" placeholder="Search Here" />
+    </div>
+    <div id="movie-frame">
+      <div class="movie-card">
+        <div class="movie-img">
+          <img src="movies-images/living-in-bondage.png" alt="movie image" />
+        </div>
+        <div class="movie-details">
+          <h2>Living in Bondage</h2>
+          <div class="rating-container">
+            <p>Rating</p>
+            <div class="rating">
+              <p>6.2</p>
+              <div class="star-wrappwer">
+                <img
+                  src="movies-images/material-symbols-light_star.svg"
+                  alt="rating star"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="movie-card">
+        <div class="movie-img">
+          <img src="movies-images/things-fall-apart.png" alt="movie image" />
+        </div>
+        <div class="movie-details">
+          <h2>Things Fall Apart</h2>
+          <div class="rating-container">
+            <p>Rating</p>
+            <div class="rating">
+              <p>6.2</p>
+              <div class="star-wrappwer">
+                <img
+                  src="movies-images/material-symbols-light_star.svg"
+                  alt="rating star"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="movie-card">
+        <div class="movie-img">
+          <img src="movies-images/nneka-the-serpent.png" alt="movie image" />
+        </div>
+        <div class="movie-details">
+          <h2>Nneka the pretty serpent</h2>
+          <div class="rating-container">
+            <p>Rating</p>
+            <div class="rating">
+              <p>6.2</p>
+              <div class="star-wrappwer">
+                <img
+                  src="movies-images/material-symbols-light_star.svg"
+                  alt="rating star"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="movie-card">
+        <div class="movie-img">
+          <img src="movies-images/love-in-law.png" alt="movie image" />
+        </div>
+        <div class="movie-details">
+          <h2>Love In Law</h2>
+          <div class="rating-container">
+            <p>Rating</p>
+            <div class="rating">
+              <p>6.2</p>
+              <div class="star-wrappwer">
+                <img
+                  src="movies-images/material-symbols-light_star.svg"
+                  alt="rating star"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="movie-card">
+        <div class="movie-img">
+          <img src="movies-images/wedding-parade.png" alt="movie image" />
+        </div>
+        <div class="movie-details">
+          <h2>The Wedding Parade</h2>
+          <div class="rating-container">
+            <p>Rating</p>
+            <div class="rating">
+              <p>6.2</p>
+              <div class="star-wrappwer">
+                <img
+                  src="movies-images/material-symbols-light_star.svg"
+                  alt="rating star"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="movie-card">
+        <div class="movie-img">
+          <img src="movies-images/theresa.png" alt="movie image" />
+        </div>
+        <div class="movie-details">
+          <h2>Theresa The Palace Chef</h2>
+          <div class="rating-container">
+            <p>Rating</p>
+            <div class="rating">
+              <p>6.2</p>
+              <div class="star-wrappwer">
+                <img
+                  src="movies-images/material-symbols-light_star.svg"
+                  alt="rating star"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- pagination -->
+      <div id="pagination">
+        <div>
+          <img src="movies-images/arrow icon.png" alt="previous arrow" />
+        </div>
+        <div>1</div>
+        <div>2</div>
+        <div>...</div>
+        <div>10</div>
+        <div>
+          <img
+            src="movies-images/Vector=yes.png
+          "
+            alt="previoaus arrow"
+          />
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div id="footer">
+        <div id="socials">
+          <div id="footer-logo">
+            <img src="movies-images/logo.svg" alt="logo" />
+          </div>
+          <div id="social-container">
+            <div class="social">
+              <img src="movies-images/ic-facebook.svg" alt="facebook icon" />
+            </div>
+            <div class="social">
+              <img src="movies-images/ic-twitter.svg" alt="twitter icon" />
+            </div>
+            <div class="social">
+              <img src="movies-images/ic-instagram.svg" alt="instagram icon" />
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div id="others">
+            <p>Terms of Service</p>
+            <p>Cookie Policy</p>
+            <p>FAQ</p>
+            <p>Support</p>
+            <p>Careers</p>
+          </div>
+
+          <div id="copyright">
+            <p>Copyright &copy; 2023 NollyScore. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
