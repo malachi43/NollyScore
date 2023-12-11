@@ -10,12 +10,124 @@
         font-family: "Inter", sans-serif;
         font-family: "Overpass", sans-serif;
         font-size: 100%;
+        min-height: 100vh;
       }
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
       }
+
+      #movie-frame .movie-title-rating {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          height: 100%;
+        }
+
+      #movie-frame .movie-title-rating .movie-buttons {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .m-buttons {
+          margin: auto;
+          display: inline-block;
+          width: 17.63px;
+          height: 17.63px;
+          margin-right: 10px;
+        }
+        #movie-frame .movie-title-rating button {
+          padding: 10px 12px;
+          border-radius: 7px;
+          background: rgba(255, 255, 255, 1);
+          font-weight: 600;
+          font-size: 15px;
+          text-align: center;
+        }
+        .m-buttons img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .star-rating {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 0 18px;
+        }
+
+        .rating-number {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 6px;
+          width: 53px;
+        }
+
+        .star {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 57px;
+          height: 33px;
+          background: rgba(255, 255, 255, 1);
+          border-radius: 7px;
+        }
+
+        .star .star-container {
+          width: 20px;
+          height: 19px;
+        }
+
+        .star-number {
+          width: 20px;
+          height: 19px;
+        }
+
+        .star-number img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .star .star-container img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .movie-heading {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+
+        .movie-nolly {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          gap: 15px;
+        }
+        .movie-heading .nolly {
+          font-weight: 600;
+          font-size: 24px;
+          margin-right: 5px;
+          color: rgba(255, 255, 255, 1);
+        }
+
+        .movie-heading .nolly-title {
+          color: rgba(255, 255, 255, 1);
+          font-weight: 400;
+          font-size: 15px;
+        }
+
 
       #navbar-frame {
         background: black;
@@ -67,6 +179,7 @@
         width: 100%;
         height: 52px;
         margin-top: 30px;
+        padding: 0 20px;
       }
 
       #movie-tv-container #movies {
@@ -115,6 +228,7 @@
         width: 209px;
         margin-top: 30px;
         gap: 1rem;
+        margin: 20px;
       }
 
       #movie-filter h2 {
@@ -171,20 +285,20 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 21px;
-        margin-top: 60px;
+        gap: 28px;
       }
 
       #movie-frame .movie-card {
-        width: 381px;
-        height: 396px;
-        border-radius: 15px;
+        width: 298px;
+        height: 501px;
+        border-radius: 20px;
         background: black;
         border: none;
+        /* margin: 0 79px; */
       }
 
       #movie-frame .movie-card .movie-img {
-        height: 215.08px;
+        height: 340px;
         width: 100%;
       }
 
@@ -193,17 +307,20 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
       }
 
       #movie-frame .movie-card .movie-details {
-        display: flex;
-        flex-direction: column;
-        gap: 57px;
-        justify-content: center;
-        background: black;
-        margin: 0;
-        height: calc(100%-215.08px);
-        width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: black;
+          margin: 0;
+          height: calc(501px - 340px);
+          width: 100%;
+          border-radius: 20px;
       }
 
       #movie-frame .movie-card .movie-details h2,
@@ -272,6 +389,7 @@
         background: white;
         margin: 30px 0;
         gap: 13px;
+        width: 100%;
       }
 
       #pagination div {
@@ -372,40 +490,204 @@
       }
 
       /* FOR DESKTOP VIEW*/
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: 1024px) {
         #movie-tv-container {
           display: flex;
           width: 100%;
           height: 52px;
           margin-top: 0;
+          padding: 0px;
+        }
+        #movie-filter {
+          display: none;
+        }
+
+        #category-year p {
+          font-weight: 600;
+          font-size: 24px;
         }
 
         #movie-search-container {
           display: flex;
-          justify-content: space-evenly;
+          justify-content: space-between;
           align-items: center;
           width: 100%;
           height: 82px;
           border-radius: 45px;
           margin: 20px 0;
           border: none;
+          padding: 0 79px;
         }
 
         #movie-search-container #category-year {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 8px;
-        border: none;
-        height: 43px;
-      }
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          gap: 28px;
+          border: none;
+          height: 43px;
+        }
+
+        #category-year select {
+          border-radius: 15px;
+          background: black;
+          color: white;
+        }
 
         #movie-frame {
-          display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          grid-auto-rows: 396px;
-          gap: 49px;
-          margin: 60px 20px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 28px;
+          margin: 0 79px;
+        }
+
+        #movie-frame .movie-title-rating {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          height: 100%;
+        }
+
+        #movie-frame .movie-title-rating button {
+          padding: 10px 12px;
+          border-radius: 7px;
+          background: rgba(255, 255, 255, 1);
+          font-weight: 600;
+          font-size: 15px;
+          text-align: center;
+        }
+
+        #movie-frame .movie-title-rating .movie-buttons {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .m-buttons {
+          margin: auto;
+          display: inline-block;
+          width: 17.63px;
+          height: 17.63px;
+          margin-right: 10px;
+        }
+
+        .m-buttons img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .star-rating {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 0 18px;
+        }
+
+        .rating-number {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 6px;
+          width: 53px;
+        }
+
+        .star {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 57px;
+          height: 33px;
+          background: rgba(255, 255, 255, 1);
+          border-radius: 7px;
+        }
+
+        .star .star-container {
+          width: 20px;
+          height: 19px;
+        }
+
+        .star-number {
+          width: 20px;
+          height: 19px;
+        }
+
+        .star-number img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .star .star-container img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .movie-heading {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+
+        .movie-nolly {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          gap: 15px;
+        }
+        .movie-heading .nolly {
+          font-weight: 600;
+          font-size: 24px;
+          margin-right: 5px;
+          color: rgba(255, 255, 255, 1);
+        }
+
+        .movie-heading .nolly-title {
+          color: rgba(255, 255, 255, 1);
+          font-weight: 400;
+          font-size: 15px;
+        }
+
+        #movie-tv-container {
+          border-bottom: 1px solid black;
+        }
+
+        #movie-frame .movie-card {
+          width: 298px;
+          height: 501px;
+          flex-basis: 298px;
+          align-self: start;
+        }
+
+        #movie-frame .movie-card .movie-img {
+          height: 340px;
+          width: 100%;
+        }
+
+        #movie-frame .movie-card .movie-details {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: black;
+          margin: 0;
+          height: calc(501px - 340px);
+          width: 100%;
+          border-radius: 20px;
+        }
+
+        .movie-card .movie-img img {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          height: 100%;
+          width: 100%;
         }
 
         #movie-tv-container #movies {
@@ -451,6 +733,12 @@
           padding: 10px 0 0 0;
         }
 
+        #footer {
+        background: black;
+        width: 100%;
+        padding: 10px;
+      }
+
         #pagination div:nth-child(5) {
           display: flex;
         }
@@ -478,10 +766,10 @@
     <!-- Movie filter for MOVIES / TV SERIES container -->
     <div id="movie-tv-container">
       <div id="movies">
-        <p>Movie</p>
+        <p>Movies</p>
       </div>
       <div id="tv">
-        <p>TV <span id="tv-series">Series</span></p>
+        <p>TV <span id="tv-series">Shows</span></p>
       </div>
     </div>
 
@@ -530,16 +818,39 @@
           <img src="movies-images/living-in-bondage.png" alt="movie image" />
         </div>
         <div class="movie-details">
-          <h2>Living in Bondage</h2>
-          <div class="rating-container">
-            <p>Rating</p>
-            <div class="rating">
-              <p>6.2</p>
-              <div class="star-wrappwer">
-                <img
-                  src="movies-images/material-symbols-light_star.svg"
-                  alt="rating star"
-                />
+          <div class="movie-title-rating">
+            <div class="star-rating">
+              <div class="rating-number">
+                <div class="star-number">
+                  <img src="movies-images/grey-star.svg" alt="" />
+                </div>
+                <p class="rating-no">6.2</p>
+              </div>
+              <div class="star">
+                <div class="star-container">
+                  <img src="movies-images/purple-star.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="movie-nolly">
+              <div class="movie-heading">
+                <span class="nolly"> 1. Nolly</span>
+                <span class="nolly-title">Living in Bondage</span>
+              </div>
+              <div class="movie-buttons">
+                <button>
+                  <span class="m-buttons"
+                    ><img
+                      src="movies-images/add_to_watchlist.svg"
+                      alt="" /></span
+                  >Watch List
+                </button>
+                <button>
+                  <span class="m-buttons"
+                    ><img src="movies-images/play_thriller.svg" alt=""
+                  /></span>
+                  Thrilller
+                </button>
               </div>
             </div>
           </div>
@@ -552,16 +863,39 @@
           <img src="movies-images/things-fall-apart.png" alt="movie image" />
         </div>
         <div class="movie-details">
-          <h2>Things Fall Apart</h2>
-          <div class="rating-container">
-            <p>Rating</p>
-            <div class="rating">
-              <p>6.2</p>
-              <div class="star-wrappwer">
-                <img
-                  src="movies-images/material-symbols-light_star.svg"
-                  alt="rating star"
-                />
+          <div class="movie-title-rating">
+            <div class="star-rating">
+              <div class="rating-number">
+                <div class="star-number">
+                  <img src="movies-images/grey-star.svg" alt="" />
+                </div>
+                <p class="rating-no">6.2</p>
+              </div>
+              <div class="star">
+                <div class="star-container">
+                  <img src="movies-images/purple-star.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="movie-nolly">
+              <div class="movie-heading">
+                <span class="nolly"> 1. Nolly</span>
+                <span class="nolly-title">Things Fall Apart</span>
+              </div>
+              <div class="movie-buttons">
+                <button>
+                  <span class="m-buttons"
+                    ><img
+                      src="movies-images/add_to_watchlist.svg"
+                      alt="" /></span
+                  >Watch List
+                </button>
+                <button>
+                  <span class="m-buttons"
+                    ><img src="movies-images/play_thriller.svg" alt=""
+                  /></span>
+                  Thrilller
+                </button>
               </div>
             </div>
           </div>
@@ -574,16 +908,39 @@
           <img src="movies-images/nneka-the-serpent.png" alt="movie image" />
         </div>
         <div class="movie-details">
-          <h2>Nneka the pretty serpent</h2>
-          <div class="rating-container">
-            <p>Rating</p>
-            <div class="rating">
-              <p>6.2</p>
-              <div class="star-wrappwer">
-                <img
-                  src="movies-images/material-symbols-light_star.svg"
-                  alt="rating star"
-                />
+          <div class="movie-title-rating">
+            <div class="star-rating">
+              <div class="rating-number">
+                <div class="star-number">
+                  <img src="movies-images/grey-star.svg" alt="" />
+                </div>
+                <p class="rating-no">6.2</p>
+              </div>
+              <div class="star">
+                <div class="star-container">
+                  <img src="movies-images/purple-star.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="movie-nolly">
+              <div class="movie-heading">
+                <span class="nolly"> 1. Nolly</span>
+                <span class="nolly-title">Nneka the pretty ser..</span>
+              </div>
+              <div class="movie-buttons">
+                <button>
+                  <span class="m-buttons"
+                    ><img
+                      src="movies-images/add_to_watchlist.svg"
+                      alt="" /></span
+                  >Watch List
+                </button>
+                <button>
+                  <span class="m-buttons"
+                    ><img src="movies-images/play_thriller.svg" alt=""
+                  /></span>
+                  Thrilller
+                </button>
               </div>
             </div>
           </div>
@@ -596,16 +953,39 @@
           <img src="movies-images/love-in-law.png" alt="movie image" />
         </div>
         <div class="movie-details">
-          <h2>Love In Law</h2>
-          <div class="rating-container">
-            <p>Rating</p>
-            <div class="rating">
-              <p>6.2</p>
-              <div class="star-wrappwer">
-                <img
-                  src="movies-images/material-symbols-light_star.svg"
-                  alt="rating star"
-                />
+          <div class="movie-title-rating">
+            <div class="star-rating">
+              <div class="rating-number">
+                <div class="star-number">
+                  <img src="movies-images/grey-star.svg" alt="" />
+                </div>
+                <p class="rating-no">6.2</p>
+              </div>
+              <div class="star">
+                <div class="star-container">
+                  <img src="movies-images/purple-star.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="movie-nolly">
+              <div class="movie-heading">
+                <span class="nolly"> 1. Nolly</span>
+                <span class="nolly-title"> Love and law</span>
+              </div>
+              <div class="movie-buttons">
+                <button>
+                  <span class="m-buttons"
+                    ><img
+                      src="movies-images/add_to_watchlist.svg"
+                      alt="" /></span
+                  >Watch List
+                </button>
+                <button>
+                  <span class="m-buttons"
+                    ><img src="movies-images/play_thriller.svg" alt=""
+                  /></span>
+                  Thrilller
+                </button>
               </div>
             </div>
           </div>
@@ -618,16 +998,39 @@
           <img src="movies-images/wedding-parade.png" alt="movie image" />
         </div>
         <div class="movie-details">
-          <h2>The Wedding Parade</h2>
-          <div class="rating-container">
-            <p>Rating</p>
-            <div class="rating">
-              <p>6.2</p>
-              <div class="star-wrappwer">
-                <img
-                  src="movies-images/material-symbols-light_star.svg"
-                  alt="rating star"
-                />
+          <div class="movie-title-rating">
+            <div class="star-rating">
+              <div class="rating-number">
+                <div class="star-number">
+                  <img src="movies-images/grey-star.svg" alt="" />
+                </div>
+                <p class="rating-no">6.2</p>
+              </div>
+              <div class="star">
+                <div class="star-container">
+                  <img src="movies-images/purple-star.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="movie-nolly">
+              <div class="movie-heading">
+                <span class="nolly"> 1. Nolly</span>
+                <span class="nolly-title">The Wedding Party</span>
+              </div>
+              <div class="movie-buttons">
+                <button>
+                  <span class="m-buttons"
+                    ><img
+                      src="movies-images/add_to_watchlist.svg"
+                      alt="" /></span
+                  >Watch List
+                </button>
+                <button>
+                  <span class="m-buttons"
+                    ><img src="movies-images/play_thriller.svg" alt=""
+                  /></span>
+                  Thrilller
+                </button>
               </div>
             </div>
           </div>
@@ -640,20 +1043,42 @@
           <img src="movies-images/theresa.png" alt="movie image" />
         </div>
         <div class="movie-details">
-          <h2>Theresa The Palace Chef</h2>
-          <div class="rating-container">
-            <p>Rating</p>
-            <div class="rating">
-              <p>6.2</p>
-              <div class="star-wrappwer">
-                <img
-                  src="movies-images/material-symbols-light_star.svg"
-                  alt="rating star"
-                />
+          <div class="movie-title-rating">
+            <div class="star-rating">
+              <div class="rating-number">
+                <div class="star-number">
+                  <img src="movies-images/grey-star.svg" alt="" />
+                </div>
+                <p class="rating-no">6.2</p>
+              </div>
+              <div class="star">
+                <div class="star-container">
+                  <img src="movies-images/purple-star.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="movie-nolly">
+              <div class="movie-heading">
+                <span class="nolly"> 1. Nolly</span>
+                <span class="nolly-title">Theresa The Palace...</span>
+              </div>
+              <div class="movie-buttons">
+                <button>
+                  <span class="m-buttons"
+                    ><img
+                      src="movies-images/add_to_watchlist.svg"
+                      alt="" /></span
+                  >Watch List
+                </button>
+                <button>
+                  <span class="m-buttons"
+                    ><img src="movies-images/play_thriller.svg" alt=""
+                  /></span>
+                  Thrilller
+                </button>
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
 
