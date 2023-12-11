@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Overpass:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Tv Series</title>
   </head>
@@ -16,8 +22,8 @@
         />
       </div>
       <div class="type-of-film">
-        <p class="movieType">Movies</p>
-        <p class="seriesType">Tv Series</p>
+        <a class="movieType" href="#">Movies</a>
+        <a class="seriesType" href="#">Tv Series</a>
       </div>
       <div class="middle-section">
         <div class="category-selector">
@@ -25,11 +31,11 @@
             <img src="/images/Menu.png" alt="" />
             <h2 class="filtered">Filter</h2>
           </div>
-          <p>Filter:</p>
+          <p class="dark">Filter:</p>
           <p>
-            Category
+            Category:
             <span>
-              <select>
+              <select class="dark-span">
                 <option value="option1">Action</option>
                 <option value="option2">Adventure</option>
                 <option value="option3" selected>Comedy</option>
@@ -39,9 +45,9 @@
             </span>
           </p>
           <p>
-            Category
+            Year:
             <span>
-              <select>
+              <select class="dark-span">
                 <option value="option1">2019</option>
                 <option value="option2">2020</option>
                 <option value="option3">2021</option>
@@ -65,13 +71,26 @@
             />
           </div>
           <div class="card-title">
+            <div class="rating-star">
+              <span class="star-flex">
+                <img src="/images/star.png" alt="" />
+                <p>5.0</p>
+              </span>
+              <span class="star">
+                <img src="/images/star-purple.png" alt="" />
+              </span>
+            </div>
+
             <h2>Tinsel</h2>
-            <p>
-              Rating
-              <span
-                >5.0 <img class="star" src="/images/star.png" alt=""
-              /></span>
-            </p>
+
+            <div class="card-button">
+              <a class="thrill-button" href="/"
+                ><img src="/images/plusButton.png" alt="" /> Watch List</a
+              >
+              <a class="thrill-button" href="/"
+                ><img src="/images/playButton.png" alt="" /> Thriller</a
+              >
+            </div>
           </div>
         </div>
 
@@ -80,13 +99,25 @@
             <img class="image-card" src="/images/Hustle.png" alt="" />
           </div>
           <div class="card-title">
+            <div class="rating-star">
+              <span class="star-flex">
+                <img src="/images/star.png" alt="" />
+                <p>5.0</p>
+              </span>
+              <span class="star">
+                <img src="/images/star-purple.png" alt="" />
+              </span>
+            </div>
             <h2>Hustle</h2>
-            <p>
-              Rating
-              <span
-                >4.0 <img class="star" src="/images/star.png" alt=""
-              /></span>
-            </p>
+
+            <div class="card-button">
+              <a class="thrill-button" href="/"
+                ><img src="/images/plusButton.png" alt="" /> Watch List</a
+              >
+              <a class="thrill-button" href="/"
+                ><img src="/images/playButton.png" alt="" /> Thriller</a
+              >
+            </div>
           </div>
         </div>
 
@@ -95,13 +126,24 @@
             <img class="image-card" src="/images/The Johnsons.png" alt="" />
           </div>
           <div class="card-title">
+            <div class="rating-star">
+              <span class="star-flex">
+                <img src="/images/star.png" alt="" />
+                <p>5.0</p>
+              </span>
+              <span class="star">
+                <img src="/images/star-purple.png" alt="" />
+              </span>
+            </div>
             <h2>The Johnsons</h2>
-            <p>
-              Rating
-              <span
-                >5.0 <img class="star" src="/images/star.png" alt=""
-              /></span>
-            </p>
+            <div class="card-button">
+              <a class="thrill-button" href="/"
+                ><img src="/images/plusButton.png" alt="" /> Watch List</a
+              >
+              <a class="thrill-button" href="/"
+                ><img src="/images/playButton.png" alt="" /> Thriller</a
+              >
+            </div>
           </div>
         </div>
 
@@ -114,13 +156,24 @@
             />
           </div>
           <div class="card-title">
+            <div class="rating-star">
+              <span class="star-flex">
+                <img src="/images/star.png" alt="" />
+                <p>5.0</p>
+              </span>
+              <span class="star">
+                <img src="/images/star-purple.png" alt="" />
+              </span>
+            </div>
             <h2>Love in Law</h2>
-            <p>
-              Rating
-              <span
-                >3.0 <img class="star" src="/images/star.png" alt=""
-              /></span>
-            </p>
+            <div class="card-button">
+              <a class="thrill-button" href="/"
+                ><img src="/images/plusButton.png" alt="" /> Watch List</a
+              >
+              <a class="thrill-button" href="/"
+                ><img src="/images/playButton.png" alt="" /> Thriller</a
+              >
+            </div>
           </div>
         </div>
 
@@ -133,13 +186,24 @@
             />
           </div>
           <div class="card-title">
+            <div class="rating-star">
+              <span class="star-flex">
+                <img src="/images/star.png" alt="" />
+                <p>5.0</p>
+              </span>
+              <span class="star">
+                <img src="/images/star-purple.png" alt="" />
+              </span>
+            </div>
             <h2>The Wedding Parade</h2>
-            <p>
-              Rating
-              <span
-                >5.0 <img class="star" src="/images/star.png" alt=""
-              /></span>
-            </p>
+            <div class="card-button">
+              <a class="thrill-button" href="/"
+                ><img src="/images/plusButton.png" alt="" /> Watch List</a
+              >
+              <a class="thrill-button" href="/"
+                ><img src="/images/playButton.png" alt="" /> Thriller</a
+              >
+            </div>
           </div>
         </div>
 
@@ -152,13 +216,24 @@
             />
           </div>
           <div class="card-title">
+            <div class="rating-star">
+              <span class="star-flex">
+                <img src="/images/star.png" alt="" />
+                <p>5.0</p>
+              </span>
+              <span class="star">
+                <img src="/images/star-purple.png" alt="" />
+              </span>
+            </div>
             <h2>Theresa The Palace Chef</h2>
-            <p>
-              Rating
-              <span
-                >4.0 <img class="star" src="/images/star.png" alt=""
-              /></span>
-            </p>
+            <div class="card-button">
+              <a class="thrill-button" href="/"
+                ><img src="/images/plusButton.png" alt="" /> Watch List</a
+              >
+              <a class="thrill-button" href="/"
+                ><img src="/images/playButton.png" alt="" /> Thriller</a
+              >
+            </div>
           </div>
         </div>
 
@@ -171,13 +246,24 @@
             />
           </div>
           <div class="card-title">
+            <div class="rating-star">
+              <span class="star-flex">
+                <img src="/images/star.png" alt="" />
+                <p>5.0</p>
+              </span>
+              <span class="star">
+                <img src="/images/star-purple.png" alt="" />
+              </span>
+            </div>
             <h2>Royal Wedding</h2>
-            <p>
-              Rating
-              <span
-                >5.0 <img class="star" src="/images/star.png" alt=""
-              /></span>
-            </p>
+            <div class="card-button">
+              <a class="thrill-button" href="/"
+                ><img src="/images/plusButton.png" alt="" /> Watch List</a
+              >
+              <a class="thrill-button" href="/"
+                ><img src="/images/playButton.png" alt="" /> Thriller</a
+              >
+            </div>
           </div>
         </div>
 
@@ -190,13 +276,24 @@
             />
           </div>
           <div class="card-title">
+            <div class="rating-star">
+              <span class="star-flex">
+                <img src="/images/star.png" alt="" />
+                <p>5.0</p>
+              </span>
+              <span class="star">
+                <img src="/images/star-purple.png" alt="" />
+              </span>
+            </div>
             <h2>My Wife and I</h2>
-            <p>
-              Rating
-              <span
-                >5.0 <img class="star" src="/images/star.png" alt=""
-              /></span>
-            </p>
+            <div class="card-button">
+              <a class="thrill-button" href="/"
+                ><img src="/images/plusButton.png" alt="" /> Watch List</a
+              >
+              <a class="thrill-button" href="/"
+                ><img src="/images/playButton.png" alt="" /> Thriller</a
+              >
+            </div>
           </div>
         </div>
 
@@ -209,13 +306,114 @@
             />
           </div>
           <div class="card-title">
+            <div class="rating-star">
+              <span class="star-flex">
+                <img src="/images/star.png" alt="" />
+                <p>5.0</p>
+              </span>
+              <span class="star">
+                <img src="/images/star-purple.png" alt="" />
+              </span>
+            </div>
             <h2>The Favorite</h2>
-            <p>
-              Rating
-              <span
-                >5.0 <img class="star" src="/images/star.png" alt=""
-              /></span>
-            </p>
+            <div class="card-button">
+              <a class="thrill-button" href="/"
+                ><img src="/images/plusButton.png" alt="" /> Watch List</a
+              >
+              <a class="thrill-button" href="/"
+                ><img src="/images/playButton.png" alt="" /> Thriller</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="movie-image">
+            <img
+              class="image-card"
+              src="/images/Living in Bondage 1 (8).png"
+              alt=""
+            />
+          </div>
+          <div class="card-title">
+            <div class="rating-star">
+              <span class="star-flex">
+                <img src="/images/star.png" alt="" />
+                <p>5.0</p>
+              </span>
+              <span class="star">
+                <img src="/images/star-purple.png" alt="" />
+              </span>
+            </div>
+            <h2>The Favorite</h2>
+            <div class="card-button">
+              <a class="thrill-button" href="/"
+                ><img src="/images/plusButton.png" alt="" /> Watch List</a
+              >
+              <a class="thrill-button" href="/"
+                ><img src="/images/playButton.png" alt="" /> Thriller</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="movie-image">
+            <img
+              class="image-card"
+              src="/images/Living in Bondage 1 (8).png"
+              alt=""
+            />
+          </div>
+          <div class="card-title">
+            <div class="rating-star">
+              <span class="star-flex">
+                <img src="/images/star.png" alt="" />
+                <p>5.0</p>
+              </span>
+              <span class="star">
+                <img src="/images/star-purple.png" alt="" />
+              </span>
+            </div>
+            <h2>The Favorite</h2>
+            <div class="card-button">
+              <a class="thrill-button" href="/"
+                ><img src="/images/plusButton.png" alt="" /> Watch List</a
+              >
+              <a class="thrill-button" href="/"
+                ><img src="/images/playButton.png" alt="" /> Thriller</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="movie-image">
+            <img
+              class="image-card"
+              src="/images/Living in Bondage 1 (8).png"
+              alt=""
+            />
+          </div>
+          <div class="card-title">
+            <div class="rating-star">
+              <span class="star-flex">
+                <img src="/images/star.png" alt="" />
+                <p>5.0</p>
+              </span>
+              <span class="star">
+                <img src="/images/star-purple.png" alt="" />
+              </span>
+            </div>
+            <h2>The Favorite</h2>
+            <div class="card-button">
+              <a class="thrill-button" href="/"
+                ><img src="/images/plusButton.png" alt="" /> Watch List</a
+              >
+              <a class="thrill-button" href="/"
+                ><img src="/images/playButton.png" alt="" /> Thriller</a
+              >
+            </div>
           </div>
         </div>
       </div>
