@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nollyscore: Log in</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header></header>
+
+    <main>
+        <form action="#" method="post">
+
+            <h1>Log in</h1>
+
+            <section class="details">
+                <!-- EMAIL INPUT-->
+                <label for="email">Email address or Username</label>
+                <input type="email" name="email" id="email">
+
+
+                <!-- PASSWORD INPUT -->
+                <div class="pwdText-wrapper">
+                    <label for="pwd">Password</label>
+                    <div class="pwd-hide">
+                        <img src="./images/pwd-hide.svg" alt="hidden eye">
+                        <span>Show</span>
+                    </div>
+                </div>
+                <input type="password" name="pwd" id="pwd">
+
+                <!-- REMEMBER ME CHECKBOX -->
+               <div class="checkbox-container">
+                    <input type="checkbox" name="rememberMe" id="rememberMe"> 
+                    <label for="rememberMe">Remember me</label>
+               </div>
+ 
+
+                <!-- BUTTON -->
+                <label for="login-btn" class="loginbtn-label">By continuing, you agree to the <a href="#">Terms of use</a> and <a href="#">Privacy Policy</a></label>
+                <button type="submit" class="login-btn" name="login-btn" id="login-btn">Log in</button>
+            </section>
+        </form>
+
+                <!-- ACCOUNT ACTIONS SECTION-->
+            <section class="account-actions">
+
+                <p class="forgotPwd"><a href="#">Forgot your account?</a></p>
+                <p class="dontHaveAcct">Don't have an account? <a href="signup.html">Sign up</a></p>
+
+            </section>
+
+
+                <!-- SOCIALS SECTION-->
+            <section class="links">
+
+                <div class="divider">
+                    <div></div>
+                    <p>OR continue with</p>
+                    <div></div>
+                </div>
+
+                <div class="socials">
+                    <div class="facebook">
+                        <img src="./images/blue-facebook logo.svg" alt="facebook">
+                    </div>
+                    <div class="google">
+                        <img src="./images/colored google logo.svg" alt="google">
+                    </div>
+                    <div class="apple">
+                        <img src="./images/apple2 logo.svg" alt="apple">
+                    </div>
+
+                    <div class="twitter">
+                        <img src="./images/colored-twitter logo.svg" alt="twitter">
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+    <footer></footer>
+   
+</body>
+</html>

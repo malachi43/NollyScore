@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nollyscore: Sign up and Rate Away!</title>
+
+    <link rel="stylesheet" href="signup.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header></header>
+
+    <main>
+        <form action="#" method="post">
+
+                <!-- CREATE ACCOUNT HEADING -->
+            <h1>Create an account</h1>
+            <p class="login-text">Already have an account? <a href="#">Log in</a></p>
+
+
+
+                <section class="details">
+
+                    <!-- EMAIL INPUT -->
+                    <label for="email">What's your email?</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+
+
+
+                    <!-- PASSWORD INPUT  -->
+                <div class="pwdText-wrapper">
+                    <label for="pwd">Create a password</label>
+
+                    <div class="pwd-hide">
+                    <img src="./images/pwd-hide.svg" alt="hidden eye">
+                    <span>Show</span>
+                    </div>
+                </div>
+
+                    <input type="password" name="pwd" id="pwd" placeholder="Enter your password" pattern="[a-zA-Z0-9!@#$%&*()_+.-]+$" minlength="8" maxlength="12" required>
+
+                    <p class="pwd-text">Use 8 or more characters with a mix of letters, numbers & symbols</p> 
+
+
+                    <!-- BUTTON -->
+                    <label for="createAcct-btn" class="btn-label">By creating account, you agree to the <a href="#">Terms of use</a> and <a href="#">Privacy Policy</a></span></label>
+
+                    <button type="submit" class="createAcct-btn" name="createAcct-btn" id="createAcct-btn"> Create an account</button>
+                </section>
+            </form>
+
+
+                    <!-- SOCIALS -->
+                <section class="links">
+                    <h2>OR continue with</h2>
+                    <div class="socials">
+                        <div class="facebook">
+                            <img src="./images/blue-facebook logo.svg" alt="facebook">
+                            <span>Facebook</span>
+                        </div>
+                        <div class="google">
+                            <img src="./images/colored google logo.svg" alt="google">
+                            <span>Google</span>
+                        </div>
+                        <div class="apple">
+                            <img src="./images/apple2 logo.svg" alt="apple">
+                            <span>Apple</span>
+                        </div>
+                        </div>
+                </section>
+            </main>
+        <footer></footer>
+   
+</body>
+</html>
