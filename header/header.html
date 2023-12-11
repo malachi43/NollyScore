@@ -1,0 +1,202 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NollyScore</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@700&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+      }
+      #container {
+        width: 100%;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        background: black;
+        color: rgba(255, 255, 255, 1);
+      }
+      #logo-menu-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex: 2;
+      }
+      #menu-options {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 39px;
+      }
+      #watchlist-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 2;
+        gap: 90px;
+      }
+      #watchlist-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 33px;
+      }
+
+      #arrow-down:hover {
+        cursor: pointer;
+      }
+      #watch-search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
+      #search {
+        width: 27px;
+        height: 26px;
+      }
+
+      #search:hover {
+        cursor: pointer;
+      }
+      #search img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #watch-icon {
+        width: 19px;
+        height: 28px;
+      }
+      #watch-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #watch-icon:hover {
+        cursor: pointer;
+      }
+      #login {
+        width: 100px;
+        height: 40px;
+        border: none;
+      }
+      #login button {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-radius: 8px;
+        padding: 12px 25px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+      }
+      #login button:hover {
+        cursor: pointer;
+      }
+
+      #harmburger {
+        display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        #container {
+          width: 100%;
+          height: 90px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background: black;
+          color: rgba(255, 255, 255, 1);
+        }
+
+        #logo-menu-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+          width: 100%;
+          padding: 20px;
+        }
+
+        #menu-options {
+          display: none;
+        }
+
+        #watchlist-login {
+          display: none;
+        }
+
+        #harmburger {
+          display: inline;
+          width: 28px;
+          height: 19px;
+        }
+
+        #harmburger:hover {
+          cursor: pointer;
+        }
+        #harmburger img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="logo-menu-container">
+        <div id="logo">
+          <img src="header-images/nollyscore-logo.svg" alt="webiste logo" />
+        </div>
+        <!-- harmburger -->
+        <div id="harmburger">
+          <img src="header-images/harmburger.svg" alt="" />
+        </div>
+        <div id="menu-options">
+          <p>TV Shows</p>
+          <p>Movies</p>
+          <p>Artists</p>
+          <p>
+            More
+            <span
+              ><img
+                id="arrow-down"
+                src="header-images/arrow-down.svg"
+                alt="arrow down"
+            /></span>
+          </p>
+        </div>
+      </div>
+      <div id="watchlist-login">
+        <div id="watchlist-container">
+          <div id="watch-search">
+            <div id="watch-icon">
+              <img src="header-images/add-watchlist.svg" alt="" />
+            </div>
+            <p>Watch List</p>
+          </div>
+          <div id="search">
+            <img src="header-images/search-icon.svg" alt="search icon" />
+          </div>
+        </div>
+        <div id="login">
+          <button>Log in</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
