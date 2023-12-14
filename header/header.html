@@ -7,6 +7,108 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@700&display=swap");
 
+      /* Drop-down menu on clicking more. */
+
+      #harmburger-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: black;
+        gap: 10px;
+        padding: 10px 20px;
+      }
+
+      #harmburger-menu p{
+        color: rgba(255,255,255,0.5);
+        display: flex;
+
+      }
+
+      #harmburger-menu-items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        gap: 30px;
+      }
+
+      #harmburger-menu #close-harmburger p{
+        color: white;
+        font-size: 15px;
+      }
+
+      #harmburger-menu #close-harmburger{
+        align-self: flex-end;
+      }
+
+      #more {
+        position: relative;
+        
+      }
+
+      #close-more{
+        align-self: end;
+        font-size: 15px;
+        font-weight: normal;
+      }
+
+      #more-container {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        padding: 20px 40px;
+        gap: 5px;
+        width: 300px;
+        z-index: 5;
+      }
+
+      #more-menu-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        padding: 20px 40px;
+        gap: 20px;
+        width: 300px;
+      }
+
+      #more-container #col-1 {
+        color: rgba(220, 3, 255, 1);
+      }
+
+      #more-container #col-2 {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      #more-container p {
+        cursor: pointer;
+      }
+
+      #more-container #col-1 p {
+        margin-bottom: 10px;
+      }
+
+      #more-container #col-2 p {
+        margin-bottom: 10px;
+      }
+
+      #more-container #col-1 p:last-child {
+        margin-bottom: 0;
+      }
+      #more-container #col-2 p:last-child {
+        margin-bottom: 0;
+      }
+      /* end of dropdown menu*/
       * {
         padding: 0;
         margin: 0;
@@ -121,6 +223,43 @@
           background: black;
           color: rgba(255, 255, 255, 1);
         }
+/* MORE MENU OPTIONS */
+        #more-container {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 20px;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        padding: 20px 40px;
+        gap: 5px;
+        width: 300px;
+        z-index: 5;
+      }
+
+      #close-more{
+        align-self: end;
+        font-size: 15px;
+        font-weight: normal;
+      }
+
+      #close-more:hover{
+        cursor: pointer;
+      }
+
+      #more-menu-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        padding: 20px 40px;
+        gap: 20px;
+        width: 300px;
+      }
+
+/* END OF MENU OPTIONS */
+
 
         #logo-menu-container {
           display: flex;
@@ -139,6 +278,7 @@
           display: none;
         }
 
+       
         #harmburger {
           display: inline;
           width: 28px;
@@ -164,21 +304,50 @@
         </div>
         <!-- harmburger -->
         <div id="harmburger">
-          <img src="header-images/harmburger.svg" alt="" />
+          <img src="header-images/harmburger.svg" alt="harmburger" />
+        </div>
+        <div id="harmburger-menu">
+          <div id="close-harmburger"><p>X</p></div>
+          <div id="harmburger-menu-items"> 
+                 <p>New Release</p>
+                 <p>Top Rated</p>
+                 <p>Trending</p>
+                 <p>About Us</p>
+                 <p>Report Issues</p>
+                 <p>FAQ</p>
+         </div>
         </div>
         <div id="menu-options">
           <p>TV Shows</p>
           <p>Movies</p>
           <p>Artists</p>
-          <p>
-            More
-            <span
-              ><img
-                id="arrow-down"
-                src="header-images/arrow-down.svg"
-                alt="arrow down"
-            /></span>
-          </p>
+          <div id="more">
+            <p >
+              More
+              <span
+                ><img
+                  id="arrow-down"
+                  src="header-images/arrow-down.svg"
+                  alt="arrow down"
+              /></span>
+              <div id="more-container">
+                <div id="close-more"><p>X</p></div>
+                <div id="more-menu-items">
+                  <div id="col-1">
+                    <p>New Release</p>
+                    <p>Top Rated</p>
+                    <p>Trending</p>
+                  </div>
+                  <div id="col-2">
+                    <p>About Us</p>
+                    <p>Report Issues</p>
+                    <p>FAQ</p>
+                  </div>
+                </div>
+              </div>
+            </p>
+          </div>
+         
         </div>
       </div>
       <div id="watchlist-login">
@@ -198,5 +367,44 @@
         </div>
       </div>
     </div>
+
+
+    <script defer>
+
+      window.onload = function(){
+
+      const closeMoreBtn = document.getElementById('close-more')
+     const moreContainer = document.getElementById('more-container')
+     const more = document.getElementById('more')
+     const harmburgerMenu = document.getElementById('harmburger-menu')
+     const closeHarmburgerBtn = document.getElementById('close-harmburger')
+      const harmburger = document.getElementById('harmburger')
+
+    //opens up the menu in mobile phones.
+    harmburger.addEventListener('click', function(){
+      harmburgerMenu.style.display = "flex"
+      // harmburgerMenu.style.transition = "display 250ms ease-in-out"
+    })
+
+    //close the menu on mobile
+    closeHarmburgerBtn.addEventListener('click', function(){
+      harmburgerMenu.style.display = "none"
+    })
+
+    //opens the more option when clicked on desktop
+    more.addEventListener('click', function(){
+      moreContainer.style.display = "flex";
+    })
+
+    //closes the more menu opened on desktop
+    closeMoreBtn.addEventListener('click', function(){
+      moreContainer.style.display = "none"
+
+
+    })
+      }
+
+    </script>
+
   </body>
 </html>
