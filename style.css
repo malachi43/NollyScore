@@ -1,8 +1,11 @@
-* {
-  border: 0;
-  padding: 0;
+*, body {
   margin: 0;
-  box-sizing: border-box;  
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 :root {
@@ -14,50 +17,38 @@
   --watchlist-bgd: #00000E;
 }
 
-body {
-  background: var(--white);
-  overflow-x: hidden;
-}
-
-.landing-page {
-  width: 100%;
-}
-
-/* .................... */
-/* HERO BANNER STYLINGS */
-/* .................... */
-
 .hero-banner {
-  cursor: pointer;
+  position: relative;
+  max-width: 100%;
 }
 
 .hero-banner .living-in-bondage {
-  position: relative;
   width: 100%;
   height: 480px;
+  display: block;
   object-fit: cover;
 }
 
 .vector-hero {
   position: absolute;
+  width: 100%;
+  height: 66px;
+  top: 159px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 99%;
-  height: 66px;
-  top: 159px;
   padding: 0px 15px;
 }
 
 .play {
   position: absolute;
-  display: flex;
-  align-items: center;
   width: 353px;
   height: 64px;
   top: 358px;
   left: 290px;
   gap: 11px;
+  display: flex;
+  align-items: center;
 }
 
 .vector-play {
@@ -66,9 +57,9 @@ body {
 }
 
 .bondage-text {
-  color: var(--white);
   width: 278px;
   height: 57px;
+  color: var(--white);
 }
 
 .bondage-text-one {
@@ -95,7 +86,7 @@ body {
   height: 187px;
   width: 156px;
   border-radius: 10px;
-}
+} 
 
 .watch {
   position: absolute;
@@ -105,7 +96,6 @@ body {
   width: 55px;
 }
 
-
 /* .................... */
 /* BLOCK 1 STYLINGS */
 /* .................... */
@@ -114,7 +104,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 1440px;
   height: 86px
 }
 
@@ -143,6 +132,7 @@ body {
   color: black;
   font-weight: 600;
   cursor: pointer;
+  border: none;
 }
 
 .btn-group > .button:hover {
@@ -150,100 +140,118 @@ background-color: black;
 color: var(--white);
 }
 
-/* .................. */
 /* BLOCK 2 STYLING */
-/* .................. */
-
-.block-2 {
-  width: 100%;
+.movie-card {
+  position: relative;
+  width: 100%; 
+  overflow-x: auto; 
+  white-space: nowrap;
   height: 480px;
+  display: flex;
+  justify-content: center;
 }
 
-.frame {
+.movie-card-nneka {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+.movie-card-nneka img {
+  width: 272px;
+  height: 340px;
+  display: block;
+}
+
+.rating {
+  position: absolute;
+  border: 2px solid greenyellow;
+  height: 41.73px;
+  width: 41.73px;
+  border-radius: 25px;
+  top: 67%; 
+  left: 13%;
+  color: white; 
+  font-size: 15px; 
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background-color: #00001D;
+}
+
+.rating > .percentage {
+  text-align: center;
+}
+
+ .dropdown {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 92%;
-  height: 424px;
-  margin: auto;
-  margin-left: 40px;
 }
 
-.movie-card {
-  display: flex;
+.dropdown-content {
+  display: none;
+  position: absolute;
   flex-direction: column;
-  width: 272px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.movie-card > div .nneka {
-  position: relative;
-  width: 310px;
-}
-
-/* Exclude */
-.exclude {
-  position: absolute;
-  width: 100px;
-  height: 17px;
-  top: 590px;
-  left: 19%;
-}
-
-#exclude {
-  left: 42.8%;
-}
-
-#exclude2 {
-  left: 66.7%;
-}
-
-#exclude3 {
-  left: 90.6%;
-}
-
-/* Rating */
-
-.rating  {
-  position: absolute;
-  display: flex;
-  border: 2px solid greenyellow;
-  height: 40px;
+.dot-box {
+  background-color: #ddd; 
+  padding: 2px; 
+  border-radius: 5px;
+  margin-left: 3px; 
+  margin-right: 3px; 
   width: 40px;
-  border-radius: 25px;
-  align-items: center;
-  justify-content: center;
-  top: 940px;
-  left: 6%;
-  color: var(--white);
-  background-color: var(--rating);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.rating > p {
-  font-size: 0.9375rem;
-  font-weight: 25rem;
+.dot {
+  display: block;
+  width: 8px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%; 
+  
 }
 
-#rating-2 {
-  left: 30.5%;
+.dropdown:hover .dropdown-content {
+  display: flex;
 }
 
-#rating-3 {
-  left: 54.4%;
+.dropdown-content a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block;
 }
 
-#rating-4 {
-  left: 78.4%;
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
 }
 
-.movie-card > .party-serpent {
-  width: 235px;
-  height: 51px;
+.party-serpent {
+  position: relative;
   margin-top: 30px;
   margin-left: 20px;
+  width: 235px;
+  height: 51px;
 }
 
-.movie-card > .party-serpent > p {
-  padding: 1px;
+.text-one, .text-two {
+  margin: 2px;
 }
 
 /* ............... */
@@ -310,12 +318,9 @@ color: var(--white);
   line-height: 1.6rem;
 }
 
-/* ............... */
 /* BLOCK 4 STYLING */
-/* ............... */
 
 .block-4 {
-  width: 1440px;
   height: 86px;
   display: flex;
   align-items: center;
@@ -373,15 +378,17 @@ TOP RATED STYLING */
 /* ............... */
 
 .block-5 {
-  width: 100%;
+  width: none;
   height: 549px;
 }
 
 .frame-5 {
-  display: flex;
+  position: relative;
   width: 100%;
-  height: 501px;
-  flex-direction: row;
+  overflow-x: auto; 
+  white-space: nowrap;
+  height: 549px;
+  display: flex;
   justify-content: center;
   gap: 15px;
 }
@@ -458,7 +465,6 @@ TOP RATED STYLING */
 /* ............... */
 
 .block-6 {
-  width: 1440px;
   height: 55px;
   display: flex;
   flex-direction: row;
@@ -467,7 +473,6 @@ TOP RATED STYLING */
 }
 
 .block-6 .new-release-text {
-  width: 164px;
   height: 29px;
   font-weight: 600;
   font-size: 1.5rem;
@@ -476,9 +481,23 @@ TOP RATED STYLING */
 }
 
 .block-6 .view-more-text {
-  margin-right: 73px;
+  width: 138px;
+  height: 29px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.8156rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 75px;
+  gap: 10px;
 }
 
+.block-6 .view-more-text-arrow {
+  width: 9px;
+  height: 15px;
+}
 /* ............................. */
 /* BLOCK 7 / NEW RELEASE STYLING */
 /* ............................. */
@@ -489,11 +508,12 @@ TOP RATED STYLING */
 }
 
 .frame-7 {
+  position: relative;
   width: 100%;
-  height: 566px;
-  margin-top: 15px;
+  overflow-x: auto;
+  white-space: nowrap; 
+  height: 600px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   gap: 15px;
 }
@@ -573,6 +593,8 @@ TOP RATED STYLING */
   line-height: 1.6rem;
 }
 
+/* BLOCK 8 STYLING */
+
 .block-8 {
   margin: 0;
 }
@@ -582,7 +604,6 @@ TOP RATED STYLING */
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 1440px;
   height: 86px;
 }
 
@@ -617,4 +638,216 @@ TOP RATED STYLING */
 
 .btn-group-8 .arrow-1 {
   margin-left: 15px;
+}
+
+
+@media screen and (max-width: 760px) {
+
+    /* HERO BANNER MOBILE STYLING */
+    .hero-banner {
+  
+      width: 100%;
+      height: 257px;
+    }
+    
+    .hero-banner .living-in-bondage {
+  
+      width: 100%;
+      height: 257px;
+      object-fit: cover;
+      /* margin: auto */
+    }
+  
+    .vector-hero {
+  
+      width: 386.35px;
+      height: 28.19px;
+      top: 109px;
+      padding: 0px;
+      margin-left: 22px;
+    }
+  
+    .vector-hero .chev-left {
+  
+      width: 24.35px;
+      height: 28.19px;
+      border-radius: 5px;
+    }
+  
+    .vector-hero .chev-right {
+  
+      width: 24.35px;
+      height: 28.19px;
+      border-radius: 5px;
+    }
+  
+    .play {
+  
+      width: 216.95px;
+      height: 41.18px;
+      top: 209px;
+      left: 98px;
+      gap: 4.95px;
+    }
+  
+    .vector-play {
+      width: 38px;
+      height: 36px;
+    }
+  
+    .bondage-text {
+      width: 174px;
+      height: 41.18px;
+    }
+  
+    .bondage-text-one {
+      width: 174px;
+      height: 24px;
+      font-size: 1.25rem;
+      line-height: 1.5125rem;
+    }
+  
+    .bondage-text-two {
+      width: 116px;
+      height: 13px;
+      font-size: 0.6775rem;
+      line-height: 0.8194rem;
+    }
+  
+    .living-overlay {
+      height: 82.71px;
+      width: 69px;
+      top: 167px;
+      left: 22px;
+      border-radius: 5px;
+    }
+  
+    .watch {
+      top: 167px;
+      left: 29.08px;
+      height: 24.55px;
+      width: 15.92px;
+    }
+
+  /* .................... */
+/* BLOCK 1 MOBILE STYLINGS */
+/* .................... */
+
+.block-1 {
+  width: 100%;
+  height: 55px;
+  padding: 20px;
+}
+
+.block-1 > p {
+  width: 65px;
+  height: 18px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 1.1344rem;
+  margin-left: 22px;
+}
+
+.btn-group  {
+  width: 296px;
+  height: 23px;
+  border-radius: 21.12px;
+  align-items: center;
+}
+
+.btn-group > .button {
+  width: 88px;
+  height: 20.48px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.1344rem;
+}
+
+/* MOVIE CARD MOBILE STYLINGS */
+
+.movie-card {
+  margin-top: 10px;
+}
+
+.rating {
+  top: 70%; 
+}
+  
+.movie-card, .frame-5, .frame-7 {
+  justify-content:flex-start;
+  margin-left: 10px;
+}
+
+/* BLOCK 4 MOBILE STYLING */
+
+.block-4 {
+  height: 64px;
+}
+
+.block-4 .block-top {
+  width: 90%;
+  height: 24%;
+  margin-left: 21px;
+}
+
+.top-rated-text {
+  width: 96px;
+  height: 24px;
+  font-size: 1.2206rem;
+  line-height: 1.4769rem;
+}
+
+.btn-group-5  {
+  width: 278px;
+  height: 21.33px;
+  gap: 12px;
+}
+
+.btn-group-5 > .btn-top-3 {
+  width: 68.67px;
+  height: 21.33px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 1.1344rem;
+  border-radius: 16px;
+}
+
+.btn-group-5 > .btn-top-5, .btn-top-10 {
+  width: 92.67px;
+  height: 21.33px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 1.1344rem;
+  border-radius: 16px;
+}
+
+/* ............... */
+/* BLOCK 6 MOBILE STYLING */
+/* ............... */
+
+.block-6 {
+  height: 74px;
+}
+
+.block-6 .new-release-text {
+  width: 102px;
+  height: 18px;
+  font-size: 0.9375rem;
+  line-height: 1.1344rem;
+  margin-left: 21px;
+}
+
+.block-6 .view-more-text {
+  width: 102px;
+  height: 18px;
+  font-size: 15px;
+  line-height: 18px;
+  margin-right: 21px;
+  gap: 10px;
+}
+
+.block-6 .view-more-text-arrow {
+  width: 5px;
+  height: 8px;
+}
 }
