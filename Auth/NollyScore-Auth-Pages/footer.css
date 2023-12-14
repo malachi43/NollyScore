@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Overpass:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#footer {
+  background: black;
+  width: 100%;
+  padding: 10px;
+
+  font-family: "Inter", sans-serif;
+  font-family: "Overpass", sans-serif;
+}
+
+#footer #socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer #socials #footer-logo {
+  width: 85px;
+  height: 19px;
+}
+
+#footer #socials #footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#social-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 13px;
+}
+
+#social-container .social {
+  width: 41px;
+  height: 41px;
+  background: white;
+  border-radius: 50%;
+}
+
+#social-container .social img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#footer .section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 0 0 0;
+}
+
+#others {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+#others p {
+  color: white;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 400px;
+}
+
+#copyright {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+#copyright p {
+  color: white;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 400px;
+}
+
+@media screen and (min-width: 1024px) {
+  #footer .section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 0 0;
+  }
+
+  #footer {
+    background: black;
+    width: 100%;
+    padding: 10px;
+  }
+}
