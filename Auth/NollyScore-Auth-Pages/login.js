@@ -1,14 +1,13 @@
 const email = document.getElementById("email")
 const password = document.getElementById("pwd")
 const form = document.getElementById('login-form')
-
+let userEmail
 function loginUser(e) {
     e.preventDefault()
-    let userEmail = email.value
+    userEmail = email.value
     let userPassword = password.value
     email.value = ""
     password.value = ""
-    console.log(userEmail, userPassword)
 
 
     //retrieve user data from local storage
@@ -19,7 +18,6 @@ function loginUser(e) {
         userData = JSON.parse(localStorage.getItem('userObj'))
     }
 
-    console.log("userArray: ", userData)
     checkIfUserIsAuthenticated(userEmail, userPassword)
 }
 
@@ -41,8 +39,22 @@ function checkIfUserIsAuthenticated(email, password) {
         return
     }
 
+    const username = userEmail.slice(0, userEmail.indexOf('@'))
+
     //navigate to the desired page on successful login.
-    window.location = "tvSeries.html"
+    // window.location = "userpage.html"
+    addAsQueryString(username)
+}
+
+
+function addAsQueryString(str) {
+    let pathname = `/userpage.html`
+    let search = `username=${str}`
+    const url = new URL(window.location)
+    url.pathname = pathname
+    url.search = search
+    window.location = url.href
+    // console.log(url)
 }
 
 form.addEventListener("submit", loginUser)
