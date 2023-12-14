@@ -1,0 +1,404 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NollyScore</title>
+
+    <style>
+      /* FOR DESKTOP */
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@700&display=swap");
+
+      /* Drop-down menu on clicking more. */
+
+      #harmburger-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: black;
+        gap: 10px;
+        padding: 10px 20px;
+      }
+
+      #harmburger-menu p{
+        color: rgba(255,255,255,0.5);
+      }
+
+      #harmburger-menu-items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        gap: 30px;
+      }
+
+      #harmburger-menu #close-harmburger p{
+        color: white;
+        font-size: 15px;
+      }
+
+      #harmburger-menu #close-harmburger{
+        align-self: flex-end;
+      }
+
+      #more {
+        position: relative;
+        
+      }
+
+      #close-more{
+        align-self: end;
+        font-size: 15px;
+        font-weight: normal;
+      }
+
+      #more-container {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        padding: 20px 40px;
+        gap: 5px;
+        width: 300px;
+        z-index: 5;
+      }
+
+      #more-menu-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        padding: 20px 40px;
+        gap: 20px;
+        width: 300px;
+      }
+
+      #more-container #col-1 {
+        color: rgba(220, 3, 255, 1);
+      }
+
+      #more-container #col-2 {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      #more-container p {
+        cursor: pointer;
+      }
+
+      #more-container #col-1 p {
+        margin-bottom: 10px;
+      }
+
+      #more-container #col-2 p {
+        margin-bottom: 10px;
+      }
+
+      #more-container #col-1 p:last-child {
+        margin-bottom: 0;
+      }
+      #more-container #col-2 p:last-child {
+        margin-bottom: 0;
+      }
+      /* end of dropdown menu*/
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+      }
+      #container {
+        width: 100%;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        background: black;
+        color: rgba(255, 255, 255, 1);
+      }
+      #logo-menu-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex: 2;
+      }
+      #menu-options {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 39px;
+      }
+      #watchlist-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 2;
+        gap: 90px;
+      }
+      #watchlist-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 33px;
+      }
+
+      #arrow-down:hover {
+        cursor: pointer;
+      }
+      #watch-search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
+      #search {
+        width: 27px;
+        height: 26px;
+      }
+
+      #search:hover {
+        cursor: pointer;
+      }
+      #search img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #watch-icon {
+        width: 19px;
+        height: 28px;
+      }
+      #watch-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #watch-icon:hover {
+        cursor: pointer;
+      }
+      #login {
+        width: 100px;
+        height: 40px;
+        border: none;
+      }
+      #login button {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-radius: 8px;
+        padding: 12px 25px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+      }
+      #login button:hover {
+        cursor: pointer;
+      }
+
+      #harmburger {
+        display: none;
+      }
+
+      /* FOR MOBILE */
+      @media screen and (max-width: 768px) {
+        #container {
+          width: 100%;
+          height: 90px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background: black;
+          color: rgba(255, 255, 255, 1);
+        }
+/* MORE MENU OPTIONS */
+        #more-container {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        padding: 10px 20px;
+        gap: 5px;
+        width: 300px;
+        z-index: 5;
+      }
+
+      #close-more{
+        align-self: end;
+        font-size: 15px;
+        font-weight: normal;
+      }
+
+      #close-more:hover{
+        cursor: pointer;
+      }
+
+
+/* END OF MENU OPTIONS */
+
+
+        #logo-menu-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+          width: 100%;
+          padding: 20px;
+        }
+
+        #menu-options {
+          display: none;
+        }
+
+        #watchlist-login {
+          display: none;
+        }
+
+       
+        #harmburger {
+          display: inline;
+          width: 28px;
+          height: 19px;
+        }
+
+        #harmburger:hover {
+          cursor: pointer;
+        }
+
+        #harmburger img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="logo-menu-container">
+        <div id="logo">
+          <img src="header-images/nollyscore-logo.svg" alt="webiste logo" />
+        </div>
+        <!-- harmburger -->
+        <div id="harmburger">
+          <img src="header-images/harmburger.svg" alt="harmburger" />
+        </div>
+        <div id="harmburger-menu">
+          <div id="close-harmburger"><p>X</p></div>
+          <div id="harmburger-menu-items"> 
+                 <p>New Release</p>
+                 <p>Top Rated</p>
+                 <p>Trending</p>
+                 <p>About Us</p>
+                 <p>Report Issues</p>
+                 <p>FAQ</p>
+         </div>
+        </div>
+        <div id="menu-options">
+          <p>TV Shows</p>
+          <p>Movies</p>
+          <p>Artists</p>
+          <div id="more">
+            <p >
+              More
+              <span
+                ><img
+                  id="arrow-down"
+                  src="header-images/arrow-down.svg"
+                  alt="arrow down"
+              /></span>
+              <div id="more-container">
+                <!-- <div id="close-more"><p>X</p></div> -->
+                <div id="more-menu-items">
+                  <div id="col-1">
+                    <p>New Release</p>
+                    <p>Top Rated</p>
+                    <p>Trending</p>
+                  </div>
+                  <div id="col-2">
+                    <p>About Us</p>
+                    <p>Report Issues</p>
+                    <p>FAQ</p>
+                  </div>
+                </div>
+              </div>
+            </p>
+          </div>
+         
+        </div>
+      </div>
+      <div id="watchlist-login">
+        <div id="watchlist-container">
+          <div id="watch-search">
+            <div id="watch-icon">
+              <img src="header-images/add-watchlist.svg" alt="" />
+            </div>
+            <p>Watch List</p>
+          </div>
+          <div id="search">
+            <img src="header-images/search-icon.svg" alt="search icon" />
+          </div>
+        </div>
+        <div id="login">
+          <button>Log in</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script >
+
+      const closeMoreBtn = document.getElementById('close-more')
+      const closeParagraph = document.querySelector('#close-more > p')
+     let moreContainer = document.getElementById('more-container')
+     const more = document.getElementById('more')
+     const harmburgerMenu = document.getElementById('harmburger-menu')
+     const closeHarmburgerBtn = document.getElementById('close-harmburger')
+      const harmburger = document.getElementById('harmburger')
+      const container = document.getElementById('container')
+       let isMoreClicked;
+
+       function toggelMoreOptions(){
+        moreContainer.style.display = isMoreClicked ? "flex": "block"
+       }
+
+    //opens up the menu in mobile phones.
+    harmburger.addEventListener('click', function(){
+      harmburgerMenu.style.display = "flex"
+    })
+
+    //close the menu on mobile
+    closeHarmburgerBtn.addEventListener('click', function(){
+      harmburgerMenu.style.display = "none"
+    })
+
+    //opens the more option when user moves the cursor ovet the text.
+    more.addEventListener('mouseover', function(){
+        moreContainer.style.display = "flex"
+    })
+
+    //close the more option when the user moves the cursor away.
+    more.addEventListener('mouseout', function(){
+      if( moreContainer.style.display === "flex"){
+        moreContainer.style.display = "none"
+      }
+    })
+
+    </script>
+
+  </body>
+</html>
