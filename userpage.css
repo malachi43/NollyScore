@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blackIsh: #1b1b1b;
+  --lightgray: #cdccce;
+  --almostblack: #00000e;
+  --purple: #dc03ff;
+
+  --montserrat: "Montserrat", sans-serif;
+  --inter: "Inter", sans-serif;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--montserrat);
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon h1 {
+  margin-top: 2rem;
+}
+.profile-icon img {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 70%;
+  z-index: 2;
+}
+
+.profile-ratings {
+  display: flex;
+  gap: 3rem;
+}
+
+.profile-ratings h2 {
+  font-size: 0.8rem;
+}
+
+.profile-ratings p {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+hr {
+  border: 1px solid var(--almostblack);
+}
+
+/* NAV SECTION */
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+nav ul li {
+  font-size: 0.8rem;
+}
+
+.activeNav {
+  background-color: var(--almostblack);
+  padding: 0.4rem;
+  border-radius: 4px;
+  color: var(--lightgray);
+}
+
+/* MOVIES RATED SECTION */
+
+.movies-rated {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.movies-rated img {
+  margin-top: 0.3rem;
+}
+
+.movies-rated span {
+  color: var(--lightgray);
+  font-size: 0.8rem;
+}
+.movies-rated p:nth-of-type(2) {
+  font-size: 0.7rem;
+}
+
+/* REVIEWS WRITTEN SECTION */
+.reviews-written {
+  padding: 0 1rem;
+  margin-bottom: 6rem;
+  display: none;
+}
+.comments {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.comments dd {
+  font-family: var(--inter);
+  font-size: 1rem;
+}
+
+.nextpage {
+  display: none;
+}
+
+/* WATCH-LIST SECTION */
+.watch-list {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  display: none;
+}
+
+.watch-list img {
+  max-width: 100%;
+  border: 0.3px solid whitesmoke;
+  border-radius: 12px;
+}
+
+/* FOOTER SECTION */
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 900px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .profile-details {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-icon img {
+    bottom: 30%;
+  }
+
+  .profile-icon h1,
+  .profile-icon p {
+    position: relative;
+    top: 1.8rem;
+  }
+
+  .profile-ratings h2 {
+    font-size: 1.3rem;
+  }
+
+  .profile-ratings p {
+    font-size: 3.5rem;
+  }
+
+  .movies-rated {
+    padding: 2rem 4.5rem;
+  }
+  nav ul {
+    justify-content: center;
+    gap: 6rem;
+  }
+
+  nav ul li {
+    font-size: 1rem;
+  }
+
+  .reviews-written {
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+  }
+
+  .watch-list {
+    flex-direction: row;
+    padding: 1.5rem 3.5rem;
+  }
+
+  .watch-list img {
+    width: 280px;
+  }
+}

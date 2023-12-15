@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nollyscore: Log in</title>
+
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="container">
+        <div id="logo-menu-container">
+          <div id="logo">
+            <img src="header-images/nollyscore-logo.svg" alt="webiste logo" />
+          </div>
+          <!-- harmburger -->
+          <div id="harmburger">
+            <img src="header-images/harmburger.svg" alt="harmburger" />
+          </div>
+          <div id="harmburger-menu">
+            <div id="close-harmburger"><p>X</p></div>
+            <div id="harmburger-menu-items"> 
+              <a href="movies.html">New Release</a>
+              <a href="tvSeries.html">Top Rated</a>
+              <a href="#">Trending</a>
+              <a href="./about.html">About Us</a>
+              <a href="./report_issue.html">Report Issues</a>
+              <a href="">FAQ</a>
+           </div>
+          </div>
+          <div id="menu-options">
+            <a href="./tvSeries.html">TV Shows</a>
+            <a href="./movies.html">Movies</p>
+            <a href="#">Artists</a>
+            <div id="more">
+              <a >
+                More
+                <span
+                  ><img
+                    id="arrow-down"
+                    src="header-images/arrow-down.svg"
+                    alt="arrow down"
+                /></span>
+                <div id="more-container">
+                  <!-- <div id="close-more"><p>X</p></div> -->
+                  <div id="more-menu-items">
+                    <div id="col-1">
+                      <a href="movies.html">New Release</a>
+                      <a href="tvSeries.html">Top Rated</a>
+                      <a href="#">Trending</a>
+                    </div>
+                    <div id="col-2">
+                      <a href="./about.html">About Us</a>
+                      <a href="./report_issue.html">Report Issues</a>
+                      <a href="">FAQ</a>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+           
+          </div>
+        </div>
+        
+        <div id="watchlist-login">
+          <div id="watchlist-container">
+            <div id="watch-search">
+              <div id="watch-icon">
+                <img src="header-images/add-watchlist.svg" alt="" />
+              </div>
+              <a href="#">Watch List</a>
+            </div>
+            <div id="search">
+              <img class="top-searchbar" src="header-images/search-icon.svg" alt="search icon" />
+              <input class="search-input" type="text" placeholder="Search..." />
+            </div>
+          </div>
+          <div id="login">
+            <a href="./signup.html">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <form id="login-form">
+        <h1>Log in</h1>
+
+        <section class="details">
+          <!-- EMAIL INPUT-->
+          <label for="email">Email address or Username</label>
+          <input type="email" name="email" id="email" />
+
+          <!-- PASSWORD INPUT -->
+          <div class="pwdText-wrapper">
+            <label for="pwd">Password</label>
+            <div class="pwd-hide">
+              <img class="image" src="./images/pwd-hide.svg" alt="hidden eye" />
+              <span>Show</span>
+            </div>
+          </div>
+          <input type="password" name="pwd" id="pwd" />
+
+          <!-- REMEMBER ME CHECKBOX -->
+          <div class="checkbox-container">
+            <input type="checkbox" name="rememberMe" id="rememberMe" />
+            <label for="rememberMe">Remember me</label>
+          </div>
+
+          <!-- BUTTON -->
+          <label for="login-btn" class="loginbtn-label"
+            >By continuing, you agree to the <a href="#">Terms of use</a> and
+            <a href="#">Privacy Policy</a></label
+          >
+          <button
+            type="submit"
+            class="login-btn"
+            name="login-btn"
+            id="login-btn"
+          >
+            Log in
+          </button>
+        </section>
+      </form>
+
+      <!-- ACCOUNT ACTIONS SECTION-->
+      <section class="account-actions">
+        <p class="forgotPwd"><a href="#">Forgot your account?</a></p>
+        <p class="dontHaveAcct">
+          Don't have an account? <a href="./signup.html">Sign up</a>
+        </p>
+      </section>
+
+      <!-- SOCIALS SECTION-->
+      <section class="links">
+        <div class="divider">
+          <div></div>
+          <p>OR continue with</p>
+          <div></div>
+        </div>
+
+        <div class="socials">
+          <div class="facebook">
+            <img
+              class="image"
+              src="./images/blue-facebook logo.svg"
+              alt="facebook"
+            />
+          </div>
+          <div class="google">
+            <img
+              class="image"
+              src="./images/colored google logo.svg"
+              alt="google"
+            />
+          </div>
+          <div class="apple">
+            <img class="image" src="./images/apple2 logo.svg" alt="apple" />
+          </div>
+
+          <div class="twitter">
+            <img
+              class="image"
+              src="./images/colored-twitter logo.svg"
+              alt="twitter"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div id="footer">
+        <div id="socials">
+          <div id="footer-logo">
+            <img src="footer-images/logo.svg" alt="logo" />
+          </div>
+          <div id="social-container">
+            <div class="social">
+              <img src="footer-images/ic-facebook.svg" alt="facebook icon" />
+            </div>
+            <div class="social">
+              <img src="footer-images/ic-twitter.svg" alt="twitter icon" />
+            </div>
+            <div class="social">
+              <img src="footer-images/ic-instagram.svg" alt="instagram icon" />
+            </div>
+          </div>
+        </div>
+
+        <!-- OTHERS -->
+        <div class="section">
+          <div id="others">
+            <p>Terms of Service</p>
+            <p>Cookie Policy</p>
+            <p>FAQ</p>
+            <p>Support</p>
+            <p>Careers</p>
+          </div>
+
+          <div id="copyright">
+            <p>Copyright &copy; 2023 NollyScore. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script defer src="./login.js"></script>
+    <script src="./header.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NollyScore Report Issue</title>
+    <link rel="stylesheet" href="report.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="logo-menu-container">
+        <div id="logo">
+          <img src="header-images/nollyscore-logo.svg" alt="webiste logo" />
+        </div>
+        <!-- harmburger -->
+        <div id="harmburger">
+          <img src="header-images/harmburger.svg" alt="harmburger" />
+        </div>
+        <div id="harmburger-menu">
+          <div id="close-harmburger"><p>X</p></div>
+          <div id="harmburger-menu-items"> 
+            <a href="movies.html">New Release</a>
+            <a href="tvSeries.html">Top Rated</a>
+            <a href="#">Trending</a>
+            <a href="./about.html">About Us</a>
+            <a href="./report_issue.html">Report Issues</a>
+            <a href="">FAQ</a>
+         </div>
+        </div>
+        <div id="menu-options">
+          <a href="./tvSeries.html">TV Shows</a>
+          <a href="./movies.html">Movies</p>
+          <a href="#">Artists</a>
+          <div id="more">
+            <a >
+              More
+              <span
+                ><img
+                  id="arrow-down"
+                  src="header-images/arrow-down.svg"
+                  alt="arrow down"
+              /></span>
+              <div id="more-container">
+                <!-- <div id="close-more"><p>X</p></div> -->
+                <div id="more-menu-items">
+                  <div id="col-1">
+                    <a href="movies.html">New Release</a>
+                    <a href="tvSeries.html">Top Rated</a>
+                    <a href="#">Trending</a>
+                  </div>
+                  <div id="col-2">
+                    <a href="./about.html">About Us</a>
+                    <a href="./report_issue.html">Report Issues</a>
+                    <a href="">FAQ</a>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+         
+        </div>
+      </div>
+      
+      <div id="watchlist-login">
+        <div id="watchlist-container">
+          <div id="watch-search">
+            <div id="watch-icon">
+              <img src="header-images/add-watchlist.svg" alt="" />
+            </div>
+            <a href="#">Watch List</a>
+          </div>
+          <div id="search">
+            <img class="top-searchbar" src="header-images/search-icon.svg" alt="search icon" />
+            <input class="search-input" type="text" placeholder="Search..." />
+          </div>
+        </div>
+        <div id="login">
+          <a href="./login.html">Log in</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main page starts here -->
+    <div class="main_container">
+      <div class="breadcrumb">
+        <h2 class="page_heading">Report Issue</h2>
+      </div>
+      <div class="rectangle"></div>
+      <div class="contact">
+        <div class="question">
+          <h1 class="caption">Notice any issue</h1>
+          <p class="text">
+            Want to chat? We'd love to hear from you! Get in touch with our
+            Customer Success Team to enquire about speaking events, advertising
+            rates or just to say hello.
+          </p>
+          <div class="copy_email">
+            <img src="./images/Envelope.png" alt="" />
+            <span>Copy email</span>
+          </div>
+        </div>
+        <div class="fit_image">
+          <img src="./images/report.png" class="image1" alt="" />
+          <img src="./images/report.png" class="image2" alt="" />
+        </div>
+      </div>
+      <div class="rectangle2"></div>
+      <div class="bottom_half">
+        <h2 class="report">Report Issue</h2>
+        <div class="contact_us">
+          <h5 class="request">Get In Touch</h5>
+          <p class="cont_text">
+            Feel free to contact us, we love to make new partners and friends.
+          </p>
+          <form action="https:httpbin.org/get" method="get">
+            <div class="names">
+              <div>
+                <div>
+                  <label for="firstName">First Name</label>
+                </div>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <div>
+                <div>
+                  <label for="lastName">Last Name</label>
+                </div>
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  placeholder="Last Name"
+                />
+              </div>
+            </div>
+            <br />
+            <div>
+              <div>
+                <label for="email">Email</label>
+              </div>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter email"
+                required
+              />
+            </div>
+            <br />
+            <div>
+              <div>
+                <label for="subject">Subject</label>
+              </div>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Message Subject"
+                required
+              />
+            </div>
+            <br />
+            <div>
+              <div>
+                <label for="message">Message</label>
+              </div>
+              <input
+                type="text"
+                name="message"
+                id="message"
+                placeholder="Type your message"
+              />
+            </div>
+            <br />
+            <div class="send">
+              <span>Send Message</span>
+              <img src="./images/PaperPlaneRight.png" alt="" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer Starts Here-->
+    <div id="footer">
+      <div id="socials">
+        <div id="footer-logo">
+          <img src="footer-images/logo.svg" alt="logo" />
+        </div>
+        <div id="social-container">
+          <div class="social">
+            <img src="footer-images/ic-facebook.svg" alt="facebook icon" />
+          </div>
+          <div class="social">
+            <img src="footer-images/ic-twitter.svg" alt="twitter icon" />
+          </div>
+          <div class="social">
+            <img src="footer-images/ic-instagram.svg" alt="instagram icon" />
+          </div>
+        </div>
+      </div>
+
+      <!-- OTHERS -->
+      <div class="section">
+        <div id="others">
+          <p>Terms of Service</p>
+          <p>Cookie Policy</p>
+          <p>FAQ</p>
+          <p>Support</p>
+          <p>Careers</p>
+        </div>
+
+        <div id="copyright">
+          <p>Copyright &copy; 2023 NollyScore. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+    <script src="./header.js"></script>
+  </body>
+</html>

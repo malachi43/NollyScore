@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nollyscore: Explore, Rate, Share</title>
+    <link rel="stylesheet" href="userpage.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <div id="logo-menu-container">
+            <div id="logo">
+                <img src="header-images/nollyscore-logo.svg" alt="webiste logo" />
+            </div>
+            <!-- harmburger -->
+            <div id="harmburger">
+                <img src="header-images/harmburger.svg" alt="harmburger" />
+            </div>
+            <div id="harmburger-menu">
+                <div id="close-harmburger"><p>X</p></div>
+                <div id="harmburger-menu-items"> 
+                  <a href="movies.html">New Release</a>
+                  <a href="tvSeries.html">Top Rated</a>
+                  <a href="#">Trending</a>
+                  <a href="./about.html">About Us</a>
+                  <a href="./report_issue.html">Report Issues</a>
+                  <a href="">FAQ</a>
+               </div>
+              </div>
+              <div id="menu-options">
+                <a href="./tvSeries.html">TV Shows</a>
+                <a href="./movies.html">Movies</p>
+                <a href="#">Artists</a>
+                <div id="more">
+                  <a >
+                    More
+                    <span
+                      ><img
+                        id="arrow-down"
+                        src="header-images/arrow-down.svg"
+                        alt="arrow down"
+                    /></span>
+                    <div id="more-container">
+                      <!-- <div id="close-more"><p>X</p></div> -->
+                      <div id="more-menu-items">
+                        <div id="col-1">
+                          <a href="movies.html">New Release</a>
+                          <a href="tvSeries.html">Top Rated</a>
+                          <a href="#">Trending</a>
+                        </div>
+                        <div id="col-2">
+                          <a href="./about.html">About Us</a>
+                          <a href="./report_issue.html">Report Issues</a>
+                          <a href="">FAQ</a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+               
+              </div>
+        </div>
+
+        <div id="watchlist-login">
+            <div id="watchlist-container">
+                <div id="watch-search">
+                    <div id="watch-icon">
+                        <img src="header-images/add-watchlist.svg" alt="" />
+                    </div>
+                    <a href="#">Watch List</a>
+                </div>
+                <div id="search">
+                    <img class="top-searchbar" src="header-images/search-icon.svg" alt="search icon" />
+                    <input class="search-input" type="text" placeholder="Search..." />
+                </div>
+            </div>
+            <div id="login">
+                <a href="./index.html">Log out</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="profile-details">
+            <div class="profile-icon">
+                <img src="./userpage-images/user-profile-pic.png" alt="profile pic" width="120px" height="120px">
+                <h1><span id="userId">name</span>_<span>NollyScore</span></h1>
+                <p><span id="username">username</span></p>
+            </div>
+
+            <div class="profile-ratings">
+                <div class="total-rating">
+                    <h2>Total Rating</h2>
+                    <p>1</p>
+                </div>
+                <div class="average-rating">
+                    <h2>Average Rating</h2>
+                    <p>7</p>
+                </div>
+            </div>
+
+        </section>
+        <hr>
+
+        <nav>
+            <ul>
+                <li id="movies-rated" class="activeNav">Movies rated</li>
+                <li id="reviews-written">Reviews written</li>
+                <li id="watch-list">Watch list</li>
+            </ul>
+        </nav>
+
+        <section class="movies-rated">
+
+            <img src="./userpage-images/NNeka 2 1.png" alt="nneka movie card" width="148px" height="180px">
+            <img src="./userpage-images/Frame 118.png" alt="stars-rating" width="130px">
+            <p>Nneka <span>THE PARTY SERPENT</span></p>
+            <p>Jan 21, 2022</p>
+        </section>
+
+        <section class="reviews-written">
+
+            <div class="comments 1">
+                <div class="rate">
+                    <img src="./userpage-images/star-purple.png" alt="star">
+                    <span>7</span>
+                </div>
+
+                <dt>Living in Bondage:</dt>
+                <dd>Great movie, will watch over and over again.</dd>
+            </div>
+
+            <div class="comments 2">
+                <div class="rate">
+                    <img src="./userpage-images/star-purple.png" alt="star">
+                    <span>4</span>
+                </div>
+
+                <dt>The Trade:</dt>
+                <dd>The movie really deserves a grammy but it's not getting a high rating because of personal reasons.
+                </dd>
+            </div>
+
+            <div class="comments 3">
+                <div class="rate">
+                    <img src="./userpage-images/star-purple.png" alt="star">
+                    <span>8</span>
+                </div>
+
+                <dt>Love in Law:</dt>
+                <dd>This movie is just fun and hilarious.</dd>
+            </div>
+
+            <div class="comments 4">
+                <div class="rate">
+                    <img src="./userpage-images/star-purple.png" alt="star">
+                    <span>10</span>
+                </div>
+
+                <dt>Nneka:</dt>
+                <dd>Best movie ever and also the scariest stuff i have seen all year. I'm reconsidering getting married
+                    now.</dd>
+            </div>
+        </section>
+
+        <section class="watch-list">
+            <img src="./userpage-images/Love in law 1.png" alt="movie card" width="600px">
+            <img src="./userpage-images/theresa the palace chef 1.png" alt="movie card" width="600px">
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer">
+            <div id="socials">
+                <div id="footer-logo">
+                    <img src="footer-images/logo.svg" alt="logo" />
+                </div>
+                <div id="social-container">
+                    <div class="social">
+                        <img src="footer-images/ic-facebook.svg" alt="facebook icon" />
+                    </div>
+                    <div class="social">
+                        <img src="footer-images/ic-twitter.svg" alt="twitter icon" />
+                    </div>
+                    <div class="social">
+                        <img src="footer-images/ic-instagram.svg" alt="instagram icon" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- OTHERS -->
+            <div class="section">
+                <div id="others">
+                    <p>Terms of Service</p>
+                    <p>Cookie Policy</p>
+                    <p>FAQ</p>
+                    <p>Support</p>
+                    <p>Careers</p>
+                </div>
+
+                <div id="copyright">
+                    <p>Copyright &copy; 2023 NollyScore. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="header.js"></script>
+    <script src="userpage.js"></script>
+</body>
+
+</html>

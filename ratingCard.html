@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nolly-ratings</title>
+    <link rel="stylesheet" href="ratingStyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-container">
+        <img class="Group21" src="./images/Group 21.png" alt="huge star" />
+        <a href="./index.html">
+          <img
+            class="frame119"
+            src="./images/Frame 119.png"
+            alt="close btn"
+          /> </a
+        ><br />
+        <div class="bottom">
+          <p class="rate-movie">RATE THIS MOVIE</p>
+
+          <div class="rating">
+            <input type="radio" name="star" id="star10" value="10" />
+            <label for="star10"></label>
+            <input type="radio" name="star" id="star9" value="9" />
+            <label for="star9"></label>
+            <input type="radio" name="star" id="star8" value="8" />
+            <label for="star8"></label>
+            <input type="radio" name="star" id="star7" value="7" />
+            <label for="star7"></label>
+            <input type="radio" name="star" id="star6" value="6" />
+            <label for="star6"></label>
+            <input type="radio" name="star" id="star5" value="5" />
+            <label for="star5"></label>
+            <input type="radio" name="star" id="star4" value="4" />
+            <label for="star4"></label>
+            <input type="radio" name="star" id="star3" value="3" />
+            <label for="star3"></label>
+            <input type="radio" name="star" id="star2" value="2" />
+            <label for="star2"></label>
+            <input type="radio" name="star" id="star1" value="1" />
+            <label for="star1"></label>
+          </div>
+
+          <button class="bt-n">Rate</button>
+        </div>
+      </div>
+      <div class="hidden">
+        <div class="thank-you">
+          <a href="./index.html">
+            <img
+              class="close-confirm"
+              src="./images/Frame 119.png"
+              alt="close btn"
+            /> </a
+          ><br />
+          <img
+            class="thank-you-image"
+            src="./images/illustration-thank-you.svg"
+            alt="thank you image"
+          />
+
+          <!-- Add rating here -->
+          <div class="rated">You rated it <span class="score"></span> 👍</div>
+          <h2>Thank you!</h2>
+          <p>
+            We appreciate you taking the time to give a rating. Thanks for being
+            amazing 🤩🤩🤩
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./ratingCard.js"></script>
+  </body>
+</html>
